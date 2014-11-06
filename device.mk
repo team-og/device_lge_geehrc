@@ -38,12 +38,7 @@ PRODUCT_PACKAGES := \
 PRODUCT_PACKAGES += \
     charger_res_images
 
-ifeq ($(TARGET_PREBUILT_KERNEL),)
 LOCAL_KERNEL := device/lge/geehrc-kernel/kernel
-endif
-else
-LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
-endif
 
 PRODUCT_COPY_FILES := \
 	$(LOCAL_KERNEL):kernel
