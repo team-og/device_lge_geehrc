@@ -36,9 +36,6 @@ PRODUCT_PACKAGES := \
     wpa_supplicant.conf
 
 PRODUCT_PACKAGES += \
-	lights.msm8960
-
-PRODUCT_PACKAGES += \
     charger_res_images
 
 ifeq ($(TARGET_PREBUILT_KERNEL),)
@@ -55,6 +52,9 @@ PRODUCT_COPY_FILES += \
 	device/lge/geehrc/WCNSS_cfg.dat:system/vendor/firmware/wlan/prima/WCNSS_cfg.dat \
 	device/lge/geehrc/WCNSS_qcom_cfg.ini:system/etc/wifi/WCNSS_qcom_cfg.ini \
 	device/lge/geehrc/WCNSS_qcom_wlan_nv.bin:system/etc/wifi/WCNSS_qcom_wlan_nv.bin
+
+PRODUCT_COPY_FILES += \
+	device/lge/geehrc/lights.msm8960.so:system/lib/hw/lights.msm8960.so
 
 PRODUCT_COPY_FILES += \
 	device/lge/geehrc/audio_policy.conf:system/etc/audio_policy.conf
@@ -114,8 +114,8 @@ PRODUCT_COPY_FILES += \
 
 # NFC packages
 PRODUCT_PACKAGES += \
-    nfc_nci.bcm2079x.default \
     NfcNci \
+    libnfc_jni \
     Tag
 
 # NFC feature files + configuration
