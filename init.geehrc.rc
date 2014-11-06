@@ -14,8 +14,6 @@
 #
 
 import init.geehrc.usb.rc
-import init.geehrc_svelte.rc
-import init.geehrc_tiny.rc
 
 on early-init
     mount debugfs debugfs /sys/kernel/debug

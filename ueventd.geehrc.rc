@@ -43,6 +43,6 @@
 /dev/block/mmcblk0p13     0660   system     system
 /dev/block/mmcblk0p14     0660   system     system
 /dev/block/mmcblk0p18     0660   root       system
-/dev/pn544   
+/dev/pn544                0600   nfc        nfc
 /dev/ks_hsic_bridge       0660   system     system
 /dev/efs_hsic_bridge      0660   system     system
